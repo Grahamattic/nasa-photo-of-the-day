@@ -25,20 +25,11 @@ function App() {
     useEffect(fetchPhotos, [])  // callback function, dependency array
     //useEffect(() => {}, []); // Not synced with any data, so this effect only fires once.
 
-    const Photo = (props) => {
-      return (
-        <div className="photo">
-          {props.photo.name}
-          <button onClick={() => setSelectedPhoto(props.photo.id)}>see details</button>
-        </div>
-      )
-    }
-
     // Render the component.
     return (
       <div className="App">
           <h1>Nasa Photo of The Day</h1>
-          <img src={ photo } alt="a random photo" />
+          <img src="https://www.nasa.gov/sites/default/files/styles/image_card_4x3_ratio/public/thumbnails/image/sts107-735-032.jpg" alt="a random photo" />
       </div>
     );
 };
